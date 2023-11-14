@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Basic SQL query to check the user's credentials
+
     $sql = "SELECT name, password FROM users WHERE name = '$username ' ";
     $result = $conn->query($sql);
 
@@ -29,6 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    // Close the database connection
+
     $conn->close();
 }
