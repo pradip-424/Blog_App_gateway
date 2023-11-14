@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $reenterPassword = $_POST["reenterPassword"];
 
-    // Basic server-side validation
+   
     if (empty($name) || empty($email) || empty($password) || empty($reenterPassword)) {
         echo "All fields are required. Please fill in all the fields.";
     } elseif ($password !== $reenterPassword) {
@@ -16,9 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
 
-        // Hash the password securely (use a proper hashing method, not this example)
+     
 
-        // Prepare and execute an SQL statement to insert data
+       
         $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $password);
 
@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error: " . $stmt->error;
         }
 
-        // Close the statement and the database connection
         $stmt->close();
         $conn->close();
     }
