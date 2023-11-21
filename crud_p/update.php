@@ -1,5 +1,5 @@
 <?php
-include "db_connection.php"; // Include the database connection script
+include "db_connection.php"; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST["id"];
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE blog_posts SET title='$title', content='$content' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location:../index.php"); // Redirect to the blog homepage
+        header("Location:../index.php"); 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
