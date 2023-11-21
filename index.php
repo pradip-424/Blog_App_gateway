@@ -56,12 +56,12 @@
   <div>
     <?php
 
-    // Include the database connection script
+   
 
     $sql = "SELECT * FROM blog_posts ORDER BY created_at DESC";
     $result = $conn->query($sql);
     ?>
-    <!-- HTML for displaying the list of blog posts -->
+  
     <ul>
       <h1>Other blogs..</h1>
       <?php
