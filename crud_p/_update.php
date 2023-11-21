@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include "db_connection.php"; // Include the database connection script
+include "db_connection.php"; 
 
 $id = $_GET["id"];
 
